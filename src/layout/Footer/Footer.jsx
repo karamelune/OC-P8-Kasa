@@ -1,5 +1,6 @@
-import KasaLogo from '../assets/kasa_white.svg';
-import { Link } from 'react-router-dom';
+import KasaLogo from '../../assets/logo/kasa_white.svg';
+
+import './Footer.scss';
 
 export default function Footer() {
 	return (
