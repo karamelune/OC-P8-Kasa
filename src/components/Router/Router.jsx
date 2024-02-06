@@ -17,7 +17,13 @@ const Router = () => {
 					<Footer />
 				</div>
 			),
-			errorElement: <ErrorPage />,
+			errorElement: (
+				<div id="mainContainer">
+					<Header />
+					<ErrorPage />
+					<Footer />
+				</div>
+			),
 			children: [
 				{
 					path: '/',

@@ -2,9 +2,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
 	width: 89%;
 	max-width: 1240px;
-	padding: 25px;
+	padding: 10px;
 	margin: 50px auto;
 	gap: 5px;
 	box-sizing: border-box;
@@ -13,7 +14,6 @@
 
 	@media (max-width: 1024px) {
 		max-width: 89%;
-		padding: 10px;
 		margin: 30px auto 30px auto;
 		gap: 0;
 	}
