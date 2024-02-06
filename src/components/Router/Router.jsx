@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Home from '../../pages/Home/Home.jsx';
 import About from '../../pages/About/About.jsx';
+import Logements from '../../pages/Logements/Logements.jsx';
 import ErrorPage from '../../pages/ErrorPage/ErrorPage.jsx';
 import Footer from '../../layout/Footer/Footer.jsx';
 import Header from '../../layout/Header/Header.jsx';
@@ -26,7 +27,10 @@ const Router = () => {
 					path: '/about',
 					element: <About />,
 				},
-				{ path: '/logements/:id', element: <div>Logement</div> },
+				{
+					path: '/logements/:id',
+					element: <Logements />,
+				},
 				// ... autres routes
 			],
 		},
