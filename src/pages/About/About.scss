@@ -1,0 +1,32 @@
+#about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	.collapseContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 89%;
+		margin-top: 30px;
+
+		@media screen and (max-width: 768px) {
+			margin-top: 20px;
+		}
+
+		@media screen and (max-width: 480px) {
+			margin-top: 10px;
+		}
+
+		.collapseDiv {
+			width: 89%;
+
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logements from '../../data/logements.json';
+import housing from '../../data/housing.json';
 import Card from '../../components/Card/Card';
 import Banner from '../../components/Banner/Banner';
 import bannerSrc from '../../assets/banners/banner-home.png';
@@ -9,24 +9,27 @@ import './Home.scss';
 export default function Home() {
 	const itemsPerPage = 6;
 	const [currentPage, setCurrentPage] = useState(1);
-	const totalPages = Math.ceil(logements.length / itemsPerPage);
+	const totalPages = Math.ceil(housing.length / itemsPerPage);
 
 	const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
 
-	const paginatedLogements = () => {
+	const paginatedHousing = () => {
 		const startIndex = (currentPage - 1) * itemsPerPage;
 		const endIndex = startIndex + itemsPerPage;
-		return logements.slice(startIndex, endIndex);
+		return housing.slice(startIndex, endIndex);
 	};
 
 	return (
 		<section id="home">
-			<Banner banner={bannerSrc} />
-			<div id="logementsDiv">
-				{paginatedLogements().map((logement) => (
-					<Card key={logement.id} logement={logement} />
+			{/* Bannière */}
+			<Banner banner={bannerSrc} showHeading={true} />
+			{/* Logements */}
+			<div id="housingDiv">
+				{paginatedHousing().map((housing) => (
+					<Card key={housing.id} housing={housing} />
 				))}
 			</div>
+			{/* Pagination */}
 			<Pagination
 				currentPage={currentPage}
 				totalPages={totalPages}
